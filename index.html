@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gate Pass App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app-root">
+    <!-- JS will render the UI here -->
+  </div>
+
+  
+  <div id="modal-container" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <p id="modal-message" class="modal-message">Confirm?</p>
+      <div class="modal-actions">
+        <button id="modal-confirm" class="btn btn-primary">Confirm</button>
+        <button id="modal-cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script type="module" src="./firebase-config.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
