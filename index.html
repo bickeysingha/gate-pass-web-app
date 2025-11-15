@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gate Pass App</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <!-- PWA: basic meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d6efd">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- PWA: manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- PWA: icons for iOS (optional but good) -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
 
 </head>
 <body>
@@ -33,13 +41,20 @@
   <script type="module" src="./firebase-config.js"></script>
   <script type="module" src="./script.js"></script>
   <script>
-    if ("serviceWorker" in navigator) {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
       navigator.serviceWorker
-      .register("/service-worker.js")
-      .then(() => console.log("Service Worker Registered"))
-      .catch(err => console.log("SW registration failed:", err));
-    }
-  </script>
+        .register("./service-worker.js")
+        .then(function (reg) {
+          console.log("Service worker registered.", reg);
+        })
+        .catch(function (err) {
+          console.log("Service worker registration failed:", err);
+        });
+    });
+  }
+</script>
+
 
 </body>
 </html>

@@ -1,12 +1,13 @@
 {
-  "name": "Gate Pass Web App",
+  "name": "Gate Pass App",
   "short_name": "GatePass",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/gate-pass-web-app/",
+  "scope": "/gate-pass-web-app/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
-  "description": "A simple gate pass management web app.",
+  "description": "A simple gate pass management web application.",
   "icons": [
     {
       "src": "icons/icon-192.png",
