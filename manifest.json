@@ -1,8 +1,8 @@
 {
   "name": "Gate Pass App",
   "short_name": "GatePass",
-  "start_url": "/gate-pass-web-app/",
-  "scope": "/gate-pass-web-app/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",

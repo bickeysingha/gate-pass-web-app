@@ -1,17 +1,17 @@
 // Gate Pass App - Service Worker
 
-const CACHE_NAME = "gatepass-cache-v1";
+const CACHE_NAME = "gatepass-cache-v2";
 
 const URLS_TO_CACHE = [
-  "/gate-pass-web-app/",
-  "/gate-pass-web-app/index.html",
-  "/gate-pass-web-app/style.css",
-  "/gate-pass-web-app/script.js",
-  "/gate-pass-web-app/firebase-config.js",
-  "/gate-pass-web-app/manifest.json",
-  "/gate-pass-web-app/icons/icon-192.png",
-  "/gate-pass-web-app/icons/icon-512.png"
-];
+  "./",
+  "./index.html",
+  "./style.css",
+  "./script.js",
+  "./firebase-config.js",
+  "./manifest.json",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png"
+].map(path => new URL(path, self.registration.scope).toString());
 
 // Install
 self.addEventListener("install", event => {
